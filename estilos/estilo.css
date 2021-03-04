@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left middle middle right right' 
+      'footer footer footer footer footer footer';
+    grid-column-gap: 10px; 
+} 
+
+.header {
+    grid-area: header;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.header img{
+  width: 100%;
+  height: auto;
+}  
+
+  .left,
+  .middle,
+  .right {
+    padding: 10px;
+    height: auto; /* Should be removed. Only for demonstration */
+  }
+
+  /* Style the left column */
+.left {
+    grid-area: left;
+  }
+  
+  /* Style the middle column */
+  .middle {
+    grid-area: middle;
+  }
+  
+  /* Style the right column */
+  .right {
+    grid-area: right;
+  }
+
+  /* Style the footer */
+.footer {
+    grid-area: footer;
+    padding: 0;
+    text-align: center;
+    display: grid;
+    grid-template-areas: 
+      "footerTitle footerTitle footerTitle footerTitle"
+      "footer1     footer2     footer3     footer4"
+      "footerFoot  footerFoot  footerFoot  footerFoot";
+    grid-gap: 50px;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+
+  .description {
+    text-align: justify;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: rgb(35, 78, 197);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+  .footerTitle {
+    grid-area: footerTitle;
+    background-color: #f5cb42;
+  }
+
+  .footer1, 
+  .footer2, 
+  .footer3,
+  .footer4 {
+    background-color: white;
+  }
+
+  .footer1{
+    grid-area: footer1;
+  }
+
+  .footer2{
+    grid-area: footer2;
+  }
+
+  .footer3{
+    grid-area: footer3;
+  }
+
+  .footer4{
+    grid-area: footer4;
+  }
+
+  .footerFood {
+    grid-area: footerFoot;
+  }
+
+  p a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  p a:hover {
+    color: #1058ac;
+    text-decoration: underline;
+  }
